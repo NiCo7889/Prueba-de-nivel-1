@@ -4,6 +4,14 @@ class vehiculo():
         self.ruedas = ruedas
     def __str__(self):
         return "color {}, {} ruedas".format( self.color, self.ruedas )
+    
+class cliente():
+    lista = []
+    with open 
+    
+
+
+
 
 class Coche(Vehiculo):
     def __init__(self, color, ruedas, velocidad, cilindrada):
