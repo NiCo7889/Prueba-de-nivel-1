@@ -40,7 +40,7 @@ def iniciar():
                 if helpers.matricula_valida(matricula, db.vehiculos.lista):
                     break
             color = helpers.leer_texto(2, 30, "Color (de 2 a 30 chars)").capitalize()
-            ruedas = helpers.leer_texto(2, 30, "Ruedas (1 int)").capitalize()
+            ruedas = helpers.leer_texto(1, 1, "Ruedas (1 int)").capitalize()
             db.vehiculos.crear(matricula, color, ruedas)
             print("Vehículo añadido correctamente.")
 
@@ -50,13 +50,13 @@ def iniciar():
             vehiculo = db.vehiculos.buscar(matricula)
             if vehiculo:
                 color = helpers.leer_texto(
-                    2, 30, f"Nombre (de 2 a 30 chars) [{vehiculo.color}]").capitalize()
+                    2, 30, f"Color (de 2 a 30 chars) [{vehiculo.color}]").capitalize()
                 ruedas = helpers.leer_texto(
-                    2, 30, f"Apellido (de 2 a 30 chars) [{vehiculo.ruedas}]").capitalize()
+                    2, 30, f"Ruedas (1 int)) [{vehiculo.ruedas}]").capitalize()
                 db.vehiculos.modificar(vehiculo.matricula, color, ruedas)
-                print("Cliente modificado correctamente.")
+                print("Vehículo modificado correctamente.")
             else:
-                print("Cliente no encontrado.")
+                print("Vehículo no encontrado.")
 
         if opcion == '5':
             print("Eliminando vehículo...\n")
