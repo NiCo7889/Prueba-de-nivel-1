@@ -40,7 +40,7 @@ def iniciar():
                 if helpers.matricula_valida(matricula, db.vehiculos.lista):
                     break
             color = helpers.leer_texto(2, 30, "Color (de 2 a 30 chars)").capitalize()
-            ruedas = helpers.leer_texto(2, 30, "Ruedas (de 2 a 30 chars)").capitalize()
+            ruedas = helpers.leer_texto(2, 30, "Ruedas (1 int)").capitalize()
             db.vehiculos.crear(matricula, color, ruedas)
             print("Vehículo añadido correctamente.")
 
@@ -66,7 +66,7 @@ def iniciar():
             
         if opcion == '6':
             print("Saliendo...\n")
-            
+
         if opcion != '1' and opcion != '2' and opcion != '3' and opcion != '4' and opcion != '5' and opcion != '6':
             print("Opción inválida. Introduzca una opción válida.\n")
 
